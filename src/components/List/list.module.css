@@ -1,0 +1,18 @@
+.list {
+	list-style: none;
+	border: 1px solid #d1d1d1;
+	border-radius: 5px;
+	width: 350px;
+}
+.list__item {
+	padding: 15px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.list__item:hover {
+	background-color: #497dff;
+	color: #fff;
+}
+.list__item:nth-child(n + 2) {
+	border-top: solid 1px #d1d1d1;
+}

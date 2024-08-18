@@ -1,0 +1,8 @@
+.details {
+	list-style-type: none;
+	border: 1px solid #d1d1d1;
+	border-radius: 5px;
+}
+.details__image {
+	border-radius: 5px 5px 0 0;
+}

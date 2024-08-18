@@ -1,0 +1,30 @@
+/* Global Styles */
+@import url('//fonts.googleapis.com/css?family=Work+Sans:300,400,600');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+html,
+body {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	margin-top: 20px;
+	font-family: 'Work Sans', sans-serif;
+}
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+h2,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+#root{
+	display: flex;
+	gap: 200px;
+	align-items: flex-start;
+}
