@@ -3,16 +3,19 @@ import classes from './details.module.css';
 
 const Details: FC<{ info: { id: number; name: string } }> = ({ info }) => {
 	const [loading, setLoading] = useState<boolean>(true);
-	const [details, setDetails] = useState<{
-		id: number;
-		name: string;
-		avatar: string;
-		details: {
-			city: string;
-			company: string;
-			position: string;
-		};
-	}>();
+	const [details, setDetails] = useState<
+		| {
+				id: number;
+				name: string;
+				avatar: string;
+				details: {
+					city: string;
+					company: string;
+					position: string;
+				};
+		  }
+		| undefined
+	>();
 
 	const getData = async (url: string) => {
 		const response = await fetch(url);
@@ -34,7 +37,8 @@ const Details: FC<{ info: { id: number; name: string } }> = ({ info }) => {
 				console.error(error);
 			}
 		};
-
+		setLoading(true);
+		setDetails(undefined);
 		fetchData();
 	}, [info.id]);
 
